@@ -419,6 +419,42 @@
     display: flex;
     justify-content: space-between;
 }
+.main_frame .midd_top_ellipse1{
+    position: absolute;
+    margin-top: 37.86px;
+    margin-left: 36.05px;
+}
+.main_frame .midd_top_ellipse2{
+    position: absolute;
+    margin-top: 419.22px;
+    margin-left: 84.1px;
+}
+.main_frame .midd_top_rectangle1{
+    position: absolute;
+    margin-top: 330.69px;
+    margin-left: 370.4px;
+}
+.main_frame .midd_top_ellipse3{
+    position: absolute;
+    margin-top: 59px;
+    margin-left: 516.55px;
+}
+.main_frame .midd_top_ellipse4{
+    position: absolute;
+    margin-top: 378.33px;
+    margin-left: 554.45px;
+}
+.main_frame .midd_top_rectangle2{
+    position: absolute;
+    margin-top: 76.44px;
+    margin-left: 892.37px;
+}
+
+.main_frame .midd_top_polygon{
+    position: absolute;
+    margin-top: 424.09px;
+    margin-left: 917.96px;
+}
 
 .main_frame .midd_top-left{
     display: flex;
