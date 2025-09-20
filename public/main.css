@@ -380,6 +380,8 @@
 .left_5 .extra_1{
     display: flex;
     align-items: center;
+    flex-direction: row;
+    margin-bottom: 5px;
     /* justify-content: space-between; */
 }
 .left_5 .extra_1 span{
@@ -392,8 +394,7 @@
     font-weight: 400;
     line-height: 24px; /* 160% */
     text-transform: capitalize;
-    margin-left: 5px;
-    margin-bottom: 5px ;
+    margin-left: 5px;   
 }
 
 /* left_5 ends */
