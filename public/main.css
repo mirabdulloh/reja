@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 
-
+body{
+    background:#F0F0F6;
+}
 .frame{
     width: 100%;
     height: 100%;
@@ -25,7 +27,7 @@
 .main_frame .left_frame{
     position: relative;
     width: 305px;
-    height: 1315px;
+    height: 1500px;
     background: var(--White, #FFF);
     display: flex;
     flex-direction: column;
@@ -39,6 +41,7 @@
     margin-top: 54px;
     margin-bottom: 25px;
 }
+
 /* left frame left1 start */
 .main_frame .left_1{
     width: 228px;
@@ -632,11 +635,11 @@
 .main_frame .right_frame{
     position: relative;
     width: 108px;
-    height: 1315px;
+    height: 1500px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: var(--White-font, #FAFAFA);
+    background:  #FAFAFA;
     box-shadow: 4px 0 10px 0 rgba(47, 122, 249, 0.10);
 }
 
