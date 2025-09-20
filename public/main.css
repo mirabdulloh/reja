@@ -29,19 +29,20 @@ body{
 .main_frame .left_frame{
     position: relative;
     width: 305px;
-    height: 1315px;
-    background: var(--White, #FFF);
+    height: 1500px;
+    background:#FFFF;
     display: flex;
     flex-direction: column;
 }
 
 .main_frame .marginer{
     width: 220px;
-    height: 1.5px;
+    border: 1px solid #F0F0F6;
     background: #F0F0F6;
     margin-left: 47px;
     margin-top: 54px;
     margin-bottom: 25px;
+    
 }
 
 /* left frame left1 start */
@@ -49,7 +50,7 @@ body{
     width: 228px;
     height: 253px;
     margin-left: 47px;
-    margin-top: 47px;
+    margin-top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -406,7 +407,7 @@ body{
 .main_frame .midd_frame{
     position: relative;
     width: 970px;
-    height: 1259px;
+    height: 1312px;
     margin-left: 30px;
     margin-right:27px;
     display: flex;
@@ -498,7 +499,7 @@ body{
 }
 .main_frame .midd_top-left-btn{
     display: flex;
-    
+    border:none;
     padding: 16px 32px;
     flex-direction: row;
     justify-content: center;
