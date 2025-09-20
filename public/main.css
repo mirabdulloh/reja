@@ -591,7 +591,7 @@
 
 
 
-
+/* right frame start */
 
 .main_frame .right_frame{
     position: relative;
@@ -603,3 +603,32 @@
     background: var(--White-font, #FAFAFA);
     box-shadow: 4px 0 10px 0 rgba(47, 122, 249, 0.10);
 }
+
+.main_frame .right_frame_contrast{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-top: 50px;
+    margin-bottom: 212px;
+}
+
+.main_frame .right_frame_menu_icons{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_frame .menu_icons{
+    width: 40px;
+    height: 40px;
+    background: #F0F0F6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 43px;
+}
+.main_frame .menu_icons:hover{
+    background:  #FFB400;
+}
+
