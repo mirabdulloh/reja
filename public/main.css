@@ -149,6 +149,7 @@
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
+    margin-bottom: 10px;
     
     /* margin-bottom: 10px; */
 }
@@ -159,6 +160,7 @@
     flex-direction: row;
     /* width: 100%; */
     margin-top: 0px;
+    margin-bottom: 10px;
 }
 .left_2 .left_2-3{
     display: flex;
@@ -166,6 +168,7 @@
     justify-content: space-between;
     flex-direction: row;
     /* width: 100%; */
+    margin-bottom: 10px;
     
 
 }
@@ -394,14 +397,6 @@
 }
 
 /* left_5 ends */
-
-
-
-
-
-
-
-
 .main_frame .midd_frame{
     position: relative;
     width: 970px;
@@ -412,6 +407,17 @@
     flex-direction: column;
     background: aqua;
 }
+
+.main_frame .midd_top-frame{
+    position: relative;
+    width: 971px;
+    height: 454.328px;
+
+}
+
+
+
+
 
 .main_frame .right_frame{
     position: relative;
