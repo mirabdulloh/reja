@@ -44,7 +44,6 @@ app.post("/create-item",(req,res)=>{
 app.get("/", function(req, res){
     res.render("harid");
 });
-
 app.get("/author",(req, res)=>{
     res.render("author",{user: user})
 })
