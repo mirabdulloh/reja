@@ -1,29 +1,29 @@
 // / A task :
 
-// const countLetter = function(a,b){
-//     let count = 0;
-//     for(i=0; i<b.length; i++){
-//         if(b[i] === a){
-//             count++
-//         }
-//     }
-//     console.log(count);
+const countLetter = function(a,b){
+    let count = 0;
+    for(i=0; i<b.length; i++){
+        if(b[i] === a){
+            count++
+        }
+    }
+    console.log(count);
     
-// }
-// countLetter("i","iron man")
+}
+countLetter("e","engineer")
 
 
 
-console.log("Jack Ma Maslahatlari");
+// console.log("Jack Ma Maslahatlari");
 
-const list = [
-    "yaxshi talaba boling", // 0-20
-    "togri boshliq tanlang va koproq hato qiling", // 20-30
-    "uzingizga ishalashni boshlang", //30-40,
-    "siz kuchli bolgan narsalarni qiling", // 40-50
-    "yoshlarga invistitsiya qiling", //50-60
-    "endi dam oling, foydasi yoq", //60 ~
-]
+// const list = [
+//     "yaxshi talaba boling", // 0-20
+//     "togri boshliq tanlang va koproq hato qiling", // 20-30
+//     "uzingizga ishalashni boshlang", //30-40,
+//     "siz kuchli bolgan narsalarni qiling", // 40-50
+//     "yoshlarga invistitsiya qiling", //50-60
+//     "endi dam oling, foydasi yoq", //60 ~
+// ]
 
 
 // Callback function 
