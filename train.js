@@ -1,16 +1,16 @@
 // / A task :
 
-const countLetter = function(a,b){
-    let count = 0;
-    for(i=0; i<b.length; i++){
-        if(b[i] === a){
-            count++
-        }
-    }
-    console.log(count);
+// const countLetter = function(a,b){
+//     let count = 0;
+//     for(i=0; i<b.length; i++){
+//         if(b[i] === a){
+//             count++
+//         }
+//     }
+//     console.log(count);
     
-}
-countLetter("e","engineer")
+// }
+// countLetter("e","engineer")
 
 
 
@@ -128,4 +128,21 @@ countLetter("e","engineer")
 //     }
 // });
 // console.log("passed here 1");
+
+
+
+/// Task B
+// const countDigits = function(a){
+//     let count = 0;
+//     for(i=0; i<a.length; i++){
+//         if("0" <= a[i] && a[i] <= "9"){
+//             count++
+//         }
+//     }
+//     console.log(count);
+    
+// }
+// countDigits("ad2a54y79wet0sfgb99hhhh888")
+
+
 
