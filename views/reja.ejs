@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reja</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REJA</title>
+  <!-- Bootstrap CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background-color: #b8bbd1;">
+<body>
+  <div class="container text-center">
+    <h1 class="display-4 my-4">REJA VA MAQSADLAR</h1>
 
-   <div class="container">
-    <h1 class="display-4 text-center py-1">REJA MAQSASDLARI</h1>
-    <div class="jumbotron p-3 shadow-sm">
-        <form id="create-form" action="/create-item" method="POST">
-            <div class="d-flex align-items-center">
-                <input type="item"
-                id="create-field"
-                name="item"
-                autofocus
-                autocomplete="off"
-                class="form-control mr-3"
-                type="text"
-                style="flex: 1"
-            >
-            <button class="btn btn-primary" style="border-radius: 20px">
-                Yangi Reja Qoshish
-            </button>
-            </div>
+    <div class="card shadow-sm form-box mx-auto">
+      <div class="card-body">
+        <form id="create-form" action="/create-item" method="POST" class="form-inline justify-content-center">
+          <input
+            id="create-field"
+            name="reja"
+            autofocus
+            autocomplete="off"
+            class="form-control mr-2"
+            type="text"
+            placeholder="Yangi reja kiriting..."
+          />
+          <button class="btn btn-primary add-btn">
+            Yangi Reja Qoshish
+          </button>
         </form>
-        <button id="clean-all" class="btn btn-danger" style="border-radius: 20px" style="margin-top:15px;">
-            Hama Rejalarni O'chirish
-        </button>
+      </div>
     </div>
-   </div>
 
+
+    <ul id="item-list" class="list-group">
+      <% plans.map(function(item){ %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="item-text"><%=item.reja%></span>
+          <div class="btn-group">
+            <button data-id = "<% item._id %>" class="btn btn-sm btn-outline-secondary edit-me">O'zgartirish</button>
+            <button data-id = "<% item._id %>" class="btn btn-sm btn-outline-danger delete-me"> O'chirish</button>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+
+    <button class="btn btn-danger delete-btn mt-4" formaction="/delete-all">
+      Hamma Rejalarni O'chirish
+    </button>
+  </div>
 </body>
 </html>
