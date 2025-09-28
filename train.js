@@ -132,17 +132,17 @@
 
 
 // / Task B
-const countDigits = function(a){
-    let count = 0;
-    for(i=0; i<a.length; i++){
-        if("0" <= a[i] && a[i] <= "9"){
-            count++
-        }
-    }
-    console.log(count);
+// const countDigits = function(a){
+//     let count = 0;
+//     for(i=0; i<a.length; i++){
+//         if("0" <= a[i] && a[i] <= "9"){
+//             count++
+//         }
+//     }
+//     console.log(count);
     
-}
-countDigits("ad2a54y79wet0sfgb99hhhh888")
+// }
+// countDigits("ad2a54y79wet0sfgb99hhhh888")
 
 
 

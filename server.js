@@ -2,8 +2,8 @@ const http = require("http");
 const mongodb = require("mongodb");
 
 
-let db;
-const connectionString = "mongodb+srv://MAX:mirabdulla2003@reja.8avcuvv.mongodb.net/?retryWrites=true&w=majority&appName=reja";
+
+const connectionString = "mongodb+srv://MAX:mirabdulla2003@reja.8avcuvv.mongodb.net/?retryWrites=true&w=majority&appName=reja"
 mongodb.connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -12,7 +12,7 @@ mongodb.connect(connectionString, {
         console.log("ERROR:");
         throw err;
     } else {
-        console.log("working succed");
+        console.log("data base ulandi");
         module.exports = client;
         const app = require("./app");
         const server = http.createServer(app);
