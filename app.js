@@ -6,6 +6,7 @@ const app = express();
 // MongoDB connect
 const client =  require("./server")
 const db = client.db();
+const mongodb = require("mongodb")
 
 // 1: Kirish code
 app.use(express.static("public"));
@@ -18,6 +19,8 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing code
+
+// form API
 app.post("/create-form", (req, res) => {
   console.log("Post so'rovi /create-item");
   console.log("step 2 front end back end ga kirish ");
@@ -36,6 +39,16 @@ app.post("/create-form", (req, res) => {
    
   });
 });
+
+// FORM delete API
+app.post("/delete-item", (req,res)=>{
+  const id = req.body.id;
+  console.log(id);
+  db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)},(err,data)=>{
+    res.json({state: "success"})
+  })
+})
+
 
 app.get("/author", function (req, res) {
   res.render("author", { user: user });
