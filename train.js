@@ -12,6 +12,69 @@
 // }
 // countLetter("e","engineer")
 
+// / Task B
+// const countDigits = function(a){
+//     let count = 0;
+//     for(i=0; i<a.length; i++){
+//         if("0" <= a[i] && a[i] <= "9"){
+//             count++
+//         }
+//     }
+//     console.log(count);
+    
+// }
+// countDigits("ad2a54y79wet0sfgb99hhhh888")
+
+
+// Task C
+const moment = require("moment");
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  getTime() {
+    return moment().format("HH:mm");
+  }
+
+  qoldiq() {
+    console.log(
+      `Hozir ${this.getTime()}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+    );
+  }
+
+  sotish(product, amount) {
+    if (this[product] !== 0) {
+      this[product] -= amount;
+      console.log(
+        `Hozir ${this.getTime()}da ${amount}ta ${product} sotildi.`
+      );
+    } else {
+      console.log(`${product} mavjud emas!`);
+    }
+  }
+
+  qabul(product, amount) {
+    if (this[product] !== 0) {
+      this[product] += amount;
+      console.log(
+        `Hozir ${this.getTime()}da ${amount}ta ${product} qabul qilindi.`
+      );
+    } else {
+      console.log(`${product} mavjud emas!`);
+    }
+  }
+}
+
+// Test
+const shop = new Shop(4, 5, 2);
+shop.qoldiq();
+shop.sotish("non", 3);
+shop.qabul("non", 4);
+shop.qoldiq();
 
 
 // console.log("Jack Ma Maslahatlari");
@@ -131,18 +194,7 @@
 
 
 
-// / Task B
-// const countDigits = function(a){
-//     let count = 0;
-//     for(i=0; i<a.length; i++){
-//         if("0" <= a[i] && a[i] <= "9"){
-//             count++
-//         }
-//     }
-//     console.log(count);
-    
-// }
-// countDigits("ad2a54y79wet0sfgb99hhhh888")
+
 
 
 
