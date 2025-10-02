@@ -27,54 +27,71 @@
 
 
 // Task C
-const moment = require("moment");
+// const moment = require("moment");
 
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
+
+//   getTime() {
+//     return moment().format("HH:mm");
+//   }
+
+//   qoldiq() {
+//     console.log(
+//       `Hozir ${this.getTime()}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+//     );
+//   }
+
+//   sotish(product, amount) {
+//     if (this[product] !== 0) {
+//       this[product] -= amount;
+//       console.log(
+//         `Hozir ${this.getTime()}da ${amount}ta ${product} sotildi.`
+//       );
+//     } else {
+//       console.log(`${product} mavjud emas!`);
+//     }
+//   }
+
+//   qabul(product, amount) {
+//     if (this[product] !== 0) {
+//       this[product] += amount;
+//       console.log(
+//         `Hozir ${this.getTime()}da ${amount}ta ${product} qabul qilindi.`
+//       );
+//     } else {
+//       console.log(`${product} mavjud emas!`);
+//     }
+//   }
+// }
+
+// // Test
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+// shop.sotish("non", 3);
+// shop.qabul("non", 4);
+// shop.qoldiq();
+
+
+// Task D;
+// Task D
+function checkContent(a,b){
+  a = a.toLowerCase()
+  b = b.toLowerCase()
+  const sort = a.trim().split("").sort().join("")
+  const sort1 = b.trim().split("").sort().join("")
+  
+  if(sort === sort1) return true
+  else{
+    return false
   }
 
-  getTime() {
-    return moment().format("HH:mm");
-  }
-
-  qoldiq() {
-    console.log(
-      `Hozir ${this.getTime()}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
-    );
-  }
-
-  sotish(product, amount) {
-    if (this[product] !== 0) {
-      this[product] -= amount;
-      console.log(
-        `Hozir ${this.getTime()}da ${amount}ta ${product} sotildi.`
-      );
-    } else {
-      console.log(`${product} mavjud emas!`);
-    }
-  }
-
-  qabul(product, amount) {
-    if (this[product] !== 0) {
-      this[product] += amount;
-      console.log(
-        `Hozir ${this.getTime()}da ${amount}ta ${product} qabul qilindi.`
-      );
-    } else {
-      console.log(`${product} mavjud emas!`);
-    }
-  }
 }
-
-// Test
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-shop.sotish("non", 3);
-shop.qabul("non", 4);
-shop.qoldiq();
+console.log(checkContent("MiTGROUP   ", "GmTIPROU         "));
 
 
 // console.log("Jack Ma Maslahatlari");

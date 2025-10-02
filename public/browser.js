@@ -58,5 +58,32 @@ document.addEventListener("click", (e)=>{
             })
         }
     }
+  // edit target 
+
+  if(e.target.classList.contains("edit-me")){
+     let UserInput = prompt("ozgartirish kiriting:",e.target.parentElement.parentElement.querySelector(".item-text").innerHTML)
+     if(UserInput){
+      axios.post("/edit-item", {id:e.target.getAttribute("data-id"),new_input: UserInput})
+      .then((response)=>{
+        console.log(response.data);
+        e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = UserInput;
+      })
+      .catch((err)=>{
+        console.log("iltimos qaytatdan harakat qiling");
+        
+      })
+      
+     }
+  } 
+});
+
+document.getElementById("clean-all").addEventListener("click", (e)=>{
+  axios.post("/delete-all", {delete_all: true})
+  .then((response)=>{
+    alert(response.data.state);
+    document.location.reload();    
+  }).catch((err)=>{})
 })
+
+
 

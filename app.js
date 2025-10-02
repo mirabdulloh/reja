@@ -4,14 +4,14 @@ const app = express();
 
 
 // MongoDB connect
-const client =  require("./server")
-const db = client.db();
-const mongodb = require("mongodb")
+const client =  require("./server") 
+const db = client.db(); 
+const mongodb = require("mongodb") 
 
 // 1: Kirish code
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public")); // MIddle ware - Traditional API
+app.use(express.json()); // Middleware - Rest API
+app.use(express.urlencoded({ extended: true })); 
 
 // 2: Session code
 // 3: Views code
@@ -25,8 +25,8 @@ app.post("/create-form", (req, res) => {
   console.log("Post so'rovi /create-item");
   console.log("step 2 front end back end ga kirish ");
   
-  console.log(req.body);
-  console.log(req.body.reja);
+  console.log("malumot ketdi req bodysi kelyabdi formdan",req.body);
+  console.log("va biz bu req.body da kelayotgan malumotni faqatgina valuesini olyabmiz va bu frontendan back endga kelyabdi ",req.body.reja);
   
   
   const new_reja = req.body.reja;
@@ -43,10 +43,34 @@ app.post("/create-form", (req, res) => {
 // FORM delete API
 app.post("/delete-item", (req,res)=>{
   const id = req.body.id;
-  console.log(id);
+  console.log(mongodb.ObjectId(id));
   db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)},(err,data)=>{
     res.json({state: "success"})
   })
+})
+
+// edit router
+app.post("/edit-item", (req,res)=>{
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    {_id: new mongodb.ObjectId(data.id)},
+    {$set:{reja: data.new_input}},
+    function(err, data){
+    res.json({state:"success"});
+  })
+  
+});
+
+
+// delete all router
+
+app.post("/delete-all", (req,res)=>{
+  if(req.body.delete_all){
+  db.collection("plans").deleteMany((err,data)=>{
+    res.json({state:"hamma rejalar ochirildi"})
+  })
+  }
 })
 
 
