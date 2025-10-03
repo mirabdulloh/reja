@@ -17,10 +17,11 @@ let createField = document.getElementById("create-field");
 document
   .getElementById("create-form")
   .addEventListener("submit", (e) => {
+    // e.preventDefault() stops traditional API 
     e.preventDefault();
 
     // console.log("submitting");
-
+    // axios Rest API qurishga ishlatiladi
     axios.post("/create-form", { reja: createField.value })
       .then((response) => {
         document
@@ -76,12 +77,13 @@ document.addEventListener("click", (e)=>{
      }
   } 
 });
-
-document.getElementById("clean-all").addEventListener("click", (e)=>{
+const delete_all = document.getElementById("clean-all")
+delete_all.addEventListener("click", (e)=>{
   axios.post("/delete-all", {delete_all: true})
   .then((response)=>{
     alert(response.data.state);
     document.location.reload();    
+    
   }).catch((err)=>{})
 })
 

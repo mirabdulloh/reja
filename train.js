@@ -77,21 +77,30 @@
 // shop.qoldiq();
 
 
-// Task D;
-// Task D
-function checkContent(a,b){
-  a = a.toLowerCase()
-  b = b.toLowerCase()
-  const sort = a.trim().split("").sort().join("")
-  const sort1 = b.trim().split("").sort().join("")
-  
-  if(sort === sort1) return true
-  else{
-    return false
-  }
 
+// Task D
+// function checkContent(a,b){
+//   a = a.toLowerCase()
+//   b = b.toLowerCase()
+//   const sort = a.trim().split("").sort().join("")
+//   const sort1 = b.trim().split("").sort().join("")
+  
+//   if(sort === sort1) return true
+//   else{
+//     return false
+//   }
+
+// }
+// console.log(checkContent("MiTGROUP   ", "GmTIPROU         "));
+
+
+// Task E
+const getReverse = (a) =>{
+  a = a.toLowerCase()
+  return a.trim().split('').reverse().join('');
 }
-console.log(checkContent("MiTGROUP   ", "GmTIPROU         "));
+
+console.log(getReverse("Shaqir Shuqur   "));
 
 
 // console.log("Jack Ma Maslahatlari");

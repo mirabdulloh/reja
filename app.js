@@ -52,7 +52,9 @@ app.post("/delete-item", (req,res)=>{
 // edit router
 app.post("/edit-item", (req,res)=>{
   const data = req.body;
-  console.log(data);
+  console.log(data.id);
+  console.log(new mongodb.ObjectId(data.id));
+  
   db.collection("plans").findOneAndUpdate(
     {_id: new mongodb.ObjectId(data.id)},
     {$set:{reja: data.new_input}},
