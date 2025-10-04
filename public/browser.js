@@ -36,11 +36,11 @@ document
       });
 });
 
-
+// const deletebtn = getElementById("")
 document.addEventListener("click", (e)=>{
     console.log(e.target);
     // edit operatsiyasi
-    if(e.target.classList.contains("edit-me")){
+    if(e.target.classList.contains("delete-me")){
         alert("siz ozgartirish tugmasini bosdingiz");
     }
     // delete operatsiyasi
@@ -60,23 +60,23 @@ document.addEventListener("click", (e)=>{
         }
     }
   // edit target 
-
   if(e.target.classList.contains("edit-me")){
-     let UserInput = prompt("ozgartirish kiriting:",e.target.parentElement.parentElement.querySelector(".item-text").innerHTML)
-     if(UserInput){
-      axios.post("/edit-item", {id:e.target.getAttribute("data-id"),new_input: UserInput})
-      .then((response)=>{
-        console.log(response.data);
-        e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = UserInput;
-      })
-      .catch((err)=>{
-        console.log("iltimos qaytatdan harakat qiling");
-        
-      })
-      
-     }
-  } 
+    let UserInput = prompt("ozgartirish kiriting:",e.target.parentElement.parentElement.querySelector(".item-text").innerHTML)
+    if(UserInput){
+     axios.post("/edit-item", {id:e.target.getAttribute("data-id"),new_input: UserInput})
+     .then((response)=>{
+       console.log(response.data);
+       e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = UserInput;
+     })
+     .catch((err)=>{
+       console.log("iltimos qaytatdan harakat qiling");
+       
+     })
+     
+    }
+ } 
 });
+
 const delete_all = document.getElementById("clean-all")
 delete_all.addEventListener("click", (e)=>{
   axios.post("/delete-all", {delete_all: true})
