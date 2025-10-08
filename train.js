@@ -95,12 +95,32 @@
 
 
 // Task E
-const getReverse = (a) =>{
-  a = a.toLowerCase()
-  return a.trim().split('').reverse().join('');
-}
+// const getReverse = (a) =>{
+//   a = a.toLowerCase()
+//   return a.trim().split('').reverse().join('');
+// }
 
-console.log(getReverse("Shaqir Shuqur   "));
+// console.log(getReverse("Shaqir Shuqur   "));
+
+
+// Task F
+
+const findDoublers = (a) =>{
+  a = a.toLowerCase()
+  
+  
+  
+  for(let i = 0; i<a.length-1; i++){
+    if (a[i] === a[i+1]){
+      return true;
+    }
+    
+  }
+ 
+  return false
+}
+console.log(findDoublers("mirabdulaa"))
+
 
 
 // console.log("Jack Ma Maslahatlari");
