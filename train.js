@@ -107,19 +107,21 @@
 
 const findDoublers = (a) =>{
   a = a.toLowerCase()
+  const text = a.split("")
   
   
-  
-  for(let i = 0; i<a.length-1; i++){
-    if (a[i] === a[i+1]){
-      return true;
+  for(let i = 0; i<text.length; i++){
+    for(let b = i+1; b<text.length; b++){
+      if (text[i] === text[b]){
+        return true;
+      }
     }
     
   }
  
   return false
 }
-console.log(findDoublers("mirabdulaa"))
+console.log(findDoublers("jtust"))
 
 
 

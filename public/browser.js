@@ -82,7 +82,8 @@ delete_all.addEventListener("click", (e)=>{
   axios.post("/delete-all", {delete_all: true})
   .then((response)=>{
     alert(response.data.state);
-    document.location.reload();    
+    document.location.reload();
+      
     
   }).catch((err)=>{})
 })
